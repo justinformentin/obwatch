@@ -28,7 +28,21 @@ Browser
 <script src="https://unpkg.com/simple-object-watcher"></script>
 ```
 
-`ObjectWatch(obj: Object, callback: (key, oldVal, newVal) => unknown)`
+## API
+
+### ObjectWatch(object, callback)
+
+#### object
+
+Type `Object`
+
+The object that you want to watch
+
+#### callback
+
+Type: `Function`
+Parameters: `(key, oldVal, newVal)`
+
 
 Pass in an object you want watched, and a function that fires when the watched object's properties changed, which provides the key, old value, and new value of the property changed.
 
@@ -92,4 +106,11 @@ example.updateState("number", 100);
 // number changed from 50 to 100
 example.state.color = "green";
 // color changed from blue to green
+```
+
+## Build
+
+```bash
+npm run test
+npm run bundle
 ```

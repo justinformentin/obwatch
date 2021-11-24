@@ -25,7 +25,7 @@ export default [
   {
     input,
     output: {
-      name: "ObjectWatch",
+      name: "obwatch",
       ...outputs("umd"),
       exports: "default",
     },

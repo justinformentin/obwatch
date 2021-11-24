@@ -4,7 +4,7 @@ interface WatchableObject {
 
 type Callback = (key: string, oldVal: any, newVal: any) => unknown;
 
-export default function ObjectWatch(obj: WatchableObject, cb: Callback) {
+function ObjectWatch(obj: WatchableObject, cb: Callback) {
   function ObjectCache() {
     Object.keys(obj).forEach((key) => {
       const _key = "_" + key;
@@ -40,3 +40,5 @@ export default function ObjectWatch(obj: WatchableObject, cb: Callback) {
 
   return new ObjectCache();
 }
+
+export default ObjectWatch;
